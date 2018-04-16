@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("nav").accessibleDropDown();
+    });
+
+    $.fn.accessibleDropDown = function() {
+      var el = $(this);
+      $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+      }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+      });
+    }
+    </script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/studiestationery.png" alt="Logo">
+    <h1>Studie Stationery</h1>
+  </header>
+  <nav>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="main-nav" id="responsive-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now</a></li>
+      <li><a href="theProduct.html">The Product</a>
+        <ul>
+        <li><a href="christmas-cards.html">Christmas Cards</a></li>
+        <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+        <li><a href="halloween-cards.html">Halloween Cards</a></li>
+        <li><a href="stationery.html">Stationery</a></li>
+      </ul>
+
+      </li>
+
+      <li><a href="About.html">About</a>
+        <ul>
+        <li><a href="how-I-got-started.html">How I Got Started</a></li>
+        <li><a href="my-creative-process.html">My Creative Process</a></li>
+      </ul>
+      </li>
+
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <section>
+      <aside class="col-1-3">
+        <img src="images/christmas-1.jpg" alt="Christmas card text">
+        <img src="images/christmas-2.jpg" alt="Christmas card">
+      </aside>
+      <div class="col-2-3">
+        <div class="main-text">
+          <h2>A Brief History of Sending Christmas Cards</h2>
+          <p>
+            <img class="smImg" src="images/christmas-1.jpg" alt="Christmas Card">The sending and exchange of the Christmas card is an activity that is very much ingrained into modern day Christmas-time traditions. And given that families are spread out across the country and the world, sending a card at Christmas-time is one thing people do to keep in touch. However, the sending of Christmas cards is a relatively recent addition to Christmas tradition, essentially beginning in the 1840s, not even two centuries ago. Here is a look at the history of Christmas cards and why we send them.</p>
+
+            <p>Although the first Christmas cards as we know them today appeared in the 1800s, the idea wasn’t fabricated from thin air, but was based on some other, older practices. The predecessors to the Christmas card, such as St. Valentine's cards and Christmas letters, paved the way for this newer tradition.</p>
+            <p>The first greeting cards were New Year’s cards and Valentines, which were established in the 15th century. By the late 1700s, the general public would join into the practice.</p>
+            <p>The sending of St. Valentine’s cards became a publicly practiced tradition much sooner. First appearing in the 1400s, by the mid-1500s they had become popular. People typically made their own Valentines, writing their own verses or copying from books of verse and decorating cards with their own drawings or bits of ribbon and lace. The first manufactured Valentines appeared around the year 1800 and the popularity of these cards would pave the way for the widespread custom of sending Christmas cards.</p>
+
+          <h2>Christmas Cards Today</h2>
+          <p>The advent of the postcard is seen as the turning point when elaborate Victorian-era Christmas cards faded away in preference of simpler cards. Postcards were cheaper and easier to send. As of the 1920s, cards with envelopes grew in popularity again, but cards printed today still tend to be simple, not edged with lace or ribbon. In more recent decades, the sending of physical Christmas cards has declined somewhat because of the widespread use of electronic mail (e-mail) through the Internet. Many people send “E-Greetings” or “E-Cards” which are electronic cards, sometimes with music and animation, sent via e-mail. However, many people still choose to send real Christmas cards, with close to 2 billion Christmas cards being sent each year in America alone.</p>
+          <p>The Christmas cards that are produced by Studie Stationery typically cost about $4.00, but I also discount for bulk orders.</p>
+
+          <div class="div-background">
+          </div>
+        </div>
+        <footer><small>Copyright &copy; 2017 Kristen Studebaker</small></footer>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

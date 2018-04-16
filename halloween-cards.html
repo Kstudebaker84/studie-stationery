@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("nav").accessibleDropDown();
+    });
+
+    $.fn.accessibleDropDown = function() {
+      var el = $(this);
+      $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+      }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+      });
+    }
+    </script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/studiestationery.png" alt="Logo">
+    <h1>Studie Stationery</h1>
+  </header>
+  <nav>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="main-nav" id="responsive-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now</a></li>
+      <li><a href="theProduct.html">The Product</a>
+        <ul>
+        <li><a href="christmas-cards.html">Christmas Cards</a></li>
+        <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+        <li><a href="halloween-cards.html">Halloween Cards</a></li>
+        <li><a href="stationery.html">Stationery</a></li>
+      </ul>
+
+      </li>
+
+      <li><a href="About.html">About</a>
+        <ul>
+        <li><a href="how-I-got-started.html">How I Got Started</a></li>
+        <li><a href="my-creative-process.html">My Creative Process</a></li>
+      </ul>
+      </li>
+
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <section>
+      <aside class="col-1-3">
+        <img src="images/pumpkin.jpg" alt="Pumpkin">
+        <img src="images/witch.jpg" alt="Witch">
+        <img src="images/spider.jpg" alt="Spider">
+
+      </aside>
+      <div class="col-2-3">
+        <div class="main-text">
+          <h2>Halloween Cards</h2>
+          <p><img class="smImg" src="images/spider.jpg" alt="spider card">Who says grown ups can't have fun for Halloween? Spread your festive cheer with one of these fun cards. Bonus points if you put spider-shaped confetti in the envelope!</p>
+          <div class="div-background">
+          </div>
+        </div>
+        <footer><small>Copyright &copy; 2017 Kristen Studebaker</small></footer>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+/* reduce image width on mobile */
+article img {
+  max-width: 100%;
+}
+
+.spec {
+  margin: 15px 0 10px 0;
+  border-bottom: 1px solid #483838;
+  line-height: 0;
+}
+
+/* Slider */
+/* ********************* Slider ********************** */
+/* New in version 1.7+ */
+
+.anythingSlider {
+  margin-left: 97px;
+  max-width: 100%;
+}
+
+#slider3 {
+  width:99%;
+  height: 400px;
+  list-style: none;
+}
+/* images with caption */
+#slider3 img {
+  width: 100%;
+  height: 100%;
+}
+/* position the panels so the captions appear correctly */
+#slider3 .panel {
+position: relative;
+}
+/* captions */
+#slider3 .caption-top, #slider3 .caption-right, #slider3 .caption-bottom, #slider3 .caption-left {
+  background:#000;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/* Top caption - padding is included in the width (480px here, 500px in the script), same for height */
+#slider3 .caption-top {
+  left: 0;
+  top: 0;
+  width: 480px;
+  height: 30px;
+}
+/* Right caption - padding is included in the width (130px here, 150px in the script), same for height */
+#slider3 .caption-right {
+  right:0;
+  bottom:0;
+  width:130px;
+  height:180px;
+}
+/* Bottom caption - padding is included in the width (480px here, 500px in the script), same for height */
+#slider3 .caption-bottom {
+  left:0;
+  bottom:0;
+  width:480px;
+  height:30px;
+}
+/* Left caption - padding is included in the width (130px here, 150px in the script), same for height */
+#slider3 .caption-left {
+  left: 0;
+  bottom: 0;
+  width:130px;
+  height:180px;
+}
+/* Caption close button */
+.caption-top .close, .caption-right .close, .caption-bottom .close, .caption-left .close {
+  font-size: 80%;
+  cursor: pointer;
+  float: right;
+  display:inline-block;
+}
+
+/* Video */
+
+video {
+  float: left;
+  padding: 5px;
+  margin-top: 10px;
+}

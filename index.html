@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <link rel="stylesheet" href="css/anythingslider.css">
+  <link rel="stylesheet" href="css/theme-metallic.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://use.fontawesome.com/50df763103.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script src="js/jquery.anythingslider.min.js"></script>
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("nav").accessibleDropDown();
+      $('#slider3').anythingSlider({
+        theme           :'metallic',
+        expand          :false,
+        resizeContents  :true,
+        aspectRatio     :true,
+        showMultiple    :1,
+        changeBy        :1,
+        startPanel      :1,
+        autoPlay        :true
+      })
+      .find('.panel')
+      .find('div[class*=caption]').css({
+        position:'absolute'
+      })
+      .end()
+      .hover(function() {
+        showCaptions( $(this));
+      },
+      function() {
+        hideCaptions( $(this));
+      });
+
+
+    });
+
+    $.fn.accessibleDropDown = function() {
+      var el = $(this);
+      $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+      }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+      });
+    }
+    </script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/studiestationery.png" alt="Logo">
+    <h1>Studie Stationery</h1>
+  </header>
+  <nav>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="main-nav" id="responsive-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+      <li><a href="theProduct.html">The Product</a>
+        <ul>
+        <li><a href="christmas-cards.html">Christmas Cards</a></li>
+        <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+        <li><a href="halloween-cards.html">Halloween Cards</a></li>
+        <li><a href="stationery.html">Stationery</a></li>
+      </ul>
+
+      </li>
+
+      <li><a href="About.html">About</a>
+        <ul>
+        <li><a href="how-I-got-started.html">How I Got Started</a></li>
+        <li><a href="my-creative-process.html">My Creative Process</a></li>
+      </ul>
+      </li>
+
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <section>
+      <aside class="col-1-3">
+        <img src="images/teddybear.jpg" alt="teddy bear card">
+        <img src="images/flower.jpg" alt="vellum flower card">
+        <img src="images/mustache-card.jpg" alt="mustache card">
+        <img src="images/ohio-card.jpg" alt="Ohio card">
+      </aside>
+      <div class="col-2-3">
+        <ul id="slider3">
+                 <li>
+                   <a href="valentines-day-cards.html">
+                   <img src="images/valentine-owls.jpg" alt="cute owl couple card">
+                 </a>
+                 </li>
+                 <li>
+                   <a href="christmas-cards.html">
+                   <img src="images/christmas-1.jpg" alt="Christmas card">
+                 </a>
+                 </li>
+                 <li>
+                   <a href="halloween-cards.html">
+                   <img src="images/spider.jpg" alt="spider card">
+                 </a>
+                 </li>
+                 <li>
+                   <a href="stationery.html">
+                   <img src="images/victorian-card.jpg" alt="victorian card">
+                 </a>
+               </li>
+               </ul>
+        <div class="main-text">
+          <h2>Introduction</h2>
+          <p>Welcome to Studie Stationery! This is my homemade stationery and greeting card business. I sell my products on Etsy.</p>
+
+          <h2>Products</h2>
+          <p>My specialty is creating hand crafted holiday greeting cards.</p>
+          <p>I also make cards for birthdays, anniversaries, congratulations, thank-you's, and just because.</p>
+
+          <div class="div-background">
+          </div>
+        </div>
+        <footer><small>Copyright &copy; 2017 Kristen Studebaker</small></footer>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>

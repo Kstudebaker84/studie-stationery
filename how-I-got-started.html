@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+  <link rel="stylesheet" href="css/main.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("nav").accessibleDropDown();
+    $.fn.fullpage({
+      anchors :['page1', 'page2', 'page3', 'page4', 'page5'],
+      menu : 'menu',
+      navigation: 'true',
+      verticalCentered: 'true',
+      navigationPosition: 'right'
+    });
+  });
+
+  $.fn.accessibleDropDown = function() {
+    var el = $(this);
+    $("a", el).focus(function() {
+      $(this).parents("li").addClass("hover");
+    }).blur(function() {
+      $(this).parents("li").removeClass("hover");
+    });
+  }
+  </script>
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <section class="section" id="section1">
+    <header>
+      <img class="logo" src="images/studiestationery.png" alt="Logo">
+      <h1>Studie Stationery</h1>
+    </header>
+    <nav>
+      <label for="show-menu" class="show-menu">Show Menu</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <ul class="main-nav" id="responsive-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now</a></li>
+        <li><a href="theProduct.html">The Product</a>
+          <ul>
+          <li><a href="christmas-cards.html">Christmas Cards</a></li>
+          <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+          <li><a href="halloween-cards.html">Halloween Cards</a></li>
+          <li><a href="stationery.html">Stationery</a></li>
+        </ul>
+
+        </li>
+
+        <li><a href="About.html">About</a>
+          <ul>
+          <li><a href="how-I-got-started.html">How I Got Started</a></li>
+          <li><a href="my-creative-process.html">My Creative Process</a></li>
+        </ul>
+        </li>
+
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="intro">
+      <h1>How I Got Started</h1>
+      <p>I suppose it's in my genes. All of my family is artistic, so I was encouraged from a very young age to be creative.</p>
+</div>
+</section>
+<section class="section" id="section2">
+<article class="slide">
+  <div class="intro">
+    <h1>Grade School Years</h1>
+    <p>As a little kid, I used to make "stationery" and write nice things on it and give it to my friends and family.</p>
+  </div>
+</article>
+<article class="slide">
+  <div class="intro">
+    <h1>You're so Thoughtful!</h1>
+    <p>Of course, everyone thought it was adorable that I would draw cute pictures and write sweet things to the people I loved, and so it encouraged me to continue.</p>
+  </div>
+</article>
+<article class="slide">
+  <div class="intro">
+    <h1>Christmas Success!</h1>
+    <p>One year, my mom got me really cool rubber stamps, embossing powder, and heavyweight blank cards and asked me to make her Christmas cards for the season. Of course I jumped at the idea! I made about 100 cards, and they were a huge hit with all of the recipients.</p>
+  </div>
+</article>
+<article class="slide">
+  <div class="intro">
+    <h1>High School Creativity</h1>
+    <p>When I got to high school, I kept making cards. They got more sophisticated as my artistic nature grew. As I collected more craft supplies over the years, my cards kept getting more sophisticated and intricate. People kept telling me, "You should sell these!" And that's where it all started.</p>
+  </div>
+</article>
+</section>
+<section class="section" id="section3">
+  <article class="slide">
+    <div class="intro">
+      <h1>Break Time</h1>
+      <p>When I got to college, I quit my little business.</p>
+    </div>
+  </article>
+  <article class="slide">
+    <div class="intro">
+      <h1>Break Time</h1>
+      <p>I got lost in daily life... College classes, working part-time, and socializing with friends.</p>
+    </div>
+  </article>
+  <article class="slide">
+    <div class="intro">
+      <h1>Break Time</h1>
+      <p>However I still sent out my own handmade Christmas cards every year.</p>
+    </div>
+  </article>
+  <article class="slide">
+    <div class="intro">
+      <h1>Break Time</h1>
+      <p>My favorite hobby became a tradition I kept up with for only one season a year.</p>
+    </div>
+  </article>
+</section>
+<section class="section" id="section4">
+<div class="intro">
+  <h1>Studie Stationery</h1>
+  <p>Fast forward 10 years, and I was still casually making holiday cards and sending them to my friends and family. I love holidays and try to celebrate them every season. I began to send out homemade cards for all of the major holidays: Christmas, Valentine's Day, St. Patrick's Day, Easter, Halloween, and Thanksgiving. My friends all loved the thoughtful notes I would send them, so I decided to start hosting craft parties so that my friends could do the same for their loved ones. We had a great time! Socializing, laughing, and sharing creativity can be so much fun!</p>
+</div>
+</section>
+<section class="section" id="section5">
+  <div class="intro">
+  <h1>Studie Stationery Today</h1>
+  <p>One day in 2016, I decided to sell my handmade holiday cards online. Thus started my little shop on Etsy. I put up dozens of types of cards - for all major holidays and also cards to say "thank you," "congratulations," "happy birthday," etc.</p>
+    <p>I still host craft parties and charge only the cost of the materials used.</p>
+    <div class="image-wrap">
+      <img src="images/mermaid-heart-card.jpg" alt="Mermaid heart card">
+      <img src="images/mermaid-heart-card.jpg" alt="Mermaid heart card">
+      <img src="images/mermaid-heart-card.jpg" alt="Mermaid heart card">
+    </div>
+</div>
+</section>
+</body>
+</html>

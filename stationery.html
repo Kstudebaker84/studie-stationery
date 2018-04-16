@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("nav").accessibleDropDown();
+    });
+
+    $.fn.accessibleDropDown = function() {
+      var el = $(this);
+      $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+      }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+      });
+    }
+    </script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/studiestationery.png" alt="Logo">
+    <h1>Studie Stationery</h1>
+  </header>
+  <nav>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="main-nav" id="responsive-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now</a></li>
+      <li><a href="theProduct.html">The Product</a>
+        <ul>
+        <li><a href="christmas-cards.html">Christmas Cards</a></li>
+        <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+        <li><a href="halloween-cards.html">Halloween Cards</a></li>
+        <li><a href="stationery.html">Stationery</a></li>
+      </ul>
+
+      </li>
+
+      <li><a href="About.html">About</a>
+        <ul>
+        <li><a href="how-I-got-started.html">How I Got Started</a></li>
+        <li><a href="my-creative-process.html">My Creative Process</a></li>
+      </ul>
+      </li>
+
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <section>
+      <aside class="col-1-3">
+        <img src="images/white-bicycle.jpg" alt="White Bicycle">
+        <img src="images/multi-color-flower.jpg" alt="Multi Color Flower">
+        <img src="images/pink-flower.jpg" alt="Pink Flower">
+
+      </aside>
+      <div class="col-2-3">
+        <div class="main-text">
+          <h2>Why Letters are Better Than Email</h2>
+          <p><img class="smImg" src="images/victorian-card.jpg" alt="victorian card">Research has shown that the general act of writing by hand can promote quite a few physical and mental benefits, from improving learning abilities to fostering a more positive outlook on life. And when it comes to writing that is used as a form of communication between two people, namely letters and postcards, the impact of such messages lasts far longer than any alternative version offered in our high-tech world. From the careful intentions of the sender to the value experienced by the receiver, no true match exists for this old-time, traditional means of conversation.</p>
+          <p>Whether you’re trying to cultivate a little romance, nurture a friendship or simply stay connected with loved ones while abroad, here are nine reasons you should still send a letter or postcard once in a while.</p>
+          <p>1. They create lasting memories.</p>
+          <p>2. They show how much you care.</p>
+          <p>3. They make you feel good.</p>
+          <p>4. They make every word count.</p>
+          <p>5. They spark creativity.</p>
+          <p>6. They require your undivided attention.</p>
+          <p>7. They require unplugging.</p>
+          <p>8. They honor tradition.</p>
+          <p>9. They’re timeless.</p>
+          <div class="div-background">
+          </div>
+        </div>
+        <footer><small>Copyright &copy; 2017 Kristen Studebaker</small></footer>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("nav").accessibleDropDown();
+      $('.container1').hover(
+        function() {
+          $('.box1').stop().animate(
+            {
+              left: '850'
+            },
+            1000,
+            'easeInCubic'
+          );
+          },
+          function() {
+            $('.box1').stop().animate(
+              {
+                left: '20'
+              },
+              1000,
+              'easeOutBounce'
+            );
+      }); // end nav hover
+    });
+
+    $.fn.accessibleDropDown = function() {
+      var el = $(this);
+      $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+      }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+      });
+    }
+    </script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/studiestationery.png" alt="Logo">
+    <h1>Studie Stationery</h1>
+  </header>
+  <nav>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="main-nav" id="responsive-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now</a></li>
+      <li><a href="theProduct.html">The Product</a>
+        <ul>
+        <li><a href="christmas-cards.html">Christmas Cards</a></li>
+        <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+        <li><a href="halloween-cards.html">Halloween Cards</a></li>
+        <li><a href="stationery.html">Stationery</a></li>
+      </ul>
+
+      </li>
+
+      <li><a href="About.html">About</a>
+        <ul>
+        <li><a href="how-I-got-started.html">How I Got Started</a></li>
+        <li><a href="my-creative-process.html">My Creative Process</a></li>
+      </ul>
+      </li>
+
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <section>
+      <aside class="col-1-3">
+        <img src="images/opalescent-heart-card.jpg" alt="opalescent heart card">
+        <img src="images/thanksgiving1.jpg" alt="Thanksgiving 1 card">
+        <img src="images/fall1-card.jpg" alt="fall 1 card">
+        <img src="images/thanksgiving2.jpg" alt="Thanksgiving 2 card">
+      </aside>
+      <div class="col-2-3">
+        <div class="main-text">
+          <div class="container1">
+            <div class="box2"><img src="images/christmas-2.jpg"></div>
+            <div class="box1"><img src="images/christmas-1.jpg"></div>
+          </div>
+          <h2>My Creative Process</h2>
+          <p>No, I don't look at Pinterest for inspiration. I go to craft stores. When I shop for card-making supplies, I end up spending a lot of time in each department, looking for unique crafting elements to embellish my cards with. Often times, I use unusual craft elements that aren't in the paper-crafting section of the craft store.</p>
+
+          <p>I like mixing rubber stamping/embossing with lace, ribbons, buttons, felt, and fabric. This year, for example, for my Halloween cards, I didn't like the Halloween embellishment selection at ANY craft store, so instead, I bought a huge hole punch and made spiders out of thick black paper and paired it with leftover supplies that I've been collecting for past few decades.
+          </p>
+
+          <h2>Shopping Inspirations</h2>
+          <p>I start my holiday card shopping and craft ideas sometimes a year or two before I actually create a design. I like buying craft supplies when they go on sale at the end of the season, and then I pair them with the next few years' themes.</p>
+          <p>I shop for paper-crafting supplies in the card-making section of the craft store (obviously), but then I also shop in the ribbon, button, painting, beading, and kids' sections for a full multi-media look.</p>
+
+          <div class="div-background">
+          </div>
+        </div>
+        <footer><small>Copyright &copy; 2017 Kristen Studebaker</small></footer>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

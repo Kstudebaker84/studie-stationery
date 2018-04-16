@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Studie Stationery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://use.fontawesome.com/50df763103.js"></script>
+  <script src="https://use.typekit.net/eng0zaq.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("nav").accessibleDropDown();
+    });
+
+    $.fn.accessibleDropDown = function() {
+      var el = $(this);
+      $("a", el).focus(function() {
+        $(this).parents("li").addClass("hover");
+      }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+      });
+    }
+    function validForm(){
+    var fname = document.form1.fname;
+    var email = document.form1.email;
+    var emailRegex = /^([A-Z0-9._%+-]+)\@([A-Z0-9.-]+)\.([A-Z]{2,4})$/i;
+    var comments = document.form1.comments;
+    var phone1 = document.form1.phone1;
+    var phone2 = document.form1.phone2;
+    var phone3 = document.form1.phone3;
+    var fnErr = document.getElementById('fnErr');
+    var lnErr = document.getElementById('lnErr');
+    var emErr = document.getElementById('emErr');
+    var phErr = document.getElementById('phErr');
+    var cmErr = document.getElementById('cmErr');
+
+    if(fname.value=="") {
+      fnErr.innerHTML = "We need your name, please.";
+      fname.focus();
+      return false;
+    } else {
+      fnErr.innerHTML = "";
+    }
+
+    if(email.value == "") {
+      emErr.innerHTML = "We need an email address, please.";
+      email.focus();
+      return false;
+    }
+    else if(!emailRegex.test(email.value)) {
+      email.focus();
+      emErr.innerHTML = "enter a valid email address, please.";
+      // email.focus();
+      return false;
+    } else {
+      emErr.innerHTML = "";
+    }
+
+    if(isNaN(phone1.value) || isNaN(phone2.value) || isNaN(phone3.value)) {
+      phErr.innerHTML = "If you include a phone number it should be numbers only.";
+      phone1.select();
+      return false;
+    } else {
+      phErr.innerHTML = "";
+    }
+
+    if(comments.value == "") {
+      cmErr.innerHTML = "Please include a comment or 'none' in the comment box.";
+      comments.focus();
+      return false;
+    } else {
+      cmErr.innerHTML = "";
+    }
+
+    var interest = document.getElementById('interest');
+    var inErr = document.getElementById('inErr');
+    var si = interest.selectedIndex;
+    var inValue = interest.options[si].text;
+    if(inValue === "-- Please Select --") {
+      inErr.innerHTML = "Please select your interests.";
+      return false;
+    } else {
+      inErr.innerHTML = "";
+    }
+    var notices = document.form1.notices;
+    var selected;
+    for(var i=0;i<notices.length;i++) {
+      if(notices[i].checked) {
+        selected = notices[i].value;
+      }
+    }
+    //set up a message for a advert recipient
+    var msg = "Thank you, <b>"+fname.value
+    +"!</b> Your message has been received and one of our representatives will reply to <a href='"
+    +email.value+"'>"+email.value+"</a> within a day or two. Relax, and enjoy the rest of the site!";
+    if(selected !=undefined) {
+      document.getElementById('notePref').innerHTML = "";
+      if (selected == "yes") {
+        document.getElementById('fnlMsg').innerHTML = msg;
+      } else {
+        document.getElementById('fnlMsg').innerHTML = "<strong>"+fname.value+"</strong>, thank you for your feedback!";
+      }
+      //var contactForm = document.getElementById('contactForm').setAttribute('class','hide');
+      var loseSep = document.getElementsByClassName('spec');
+      loseSep[0].setAttribute('class', 'hide');
+    } else {
+      document.getElementById('notePref').innerHTML = "Please make a selection:";
+    }
+  }
+    </script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/studiestationery.png" alt="Logo">
+    <h1>Studie Stationery</h1>
+  </header>
+  <nav>
+    <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="main-nav" id="responsive-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://studiestationery.etsy.com/" target="_blank">Shop Now</a></li>
+      <li><a href="theProduct.html">The Product</a>
+        <ul>
+        <li><a href="christmas-cards.html">Christmas Cards</a></li>
+        <li><a href="valentines-day-cards.html">Valentine's Day Cards</a></li>
+        <li><a href="halloween-cards.html">Halloween Cards</a></li>
+        <li><a href="stationery.html">Stationery</a></li>
+      </ul>
+
+      </li>
+
+      <li><a href="About.html">About</a>
+        <ul>
+        <li><a href="how-I-got-started.html">How I Got Started</a></li>
+        <li><a href="my-creative-process.html">My Creative Process</a></li>
+      </ul>
+      </li>
+
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <section>
+      <div class="col-2-3">
+        <div class="main-text">
+               <h2>Contact</h2>
+               <p id="fnlMsg">We welcome your comments and would love the opportunity to help you!</p>
+             </article>
+             <h3 class="spec"> </h3>
+          <article id="contactForm">
+            <h2>Contact Form</h2>
+            <p class="lead">Please fill in the information below:</p>
+            <form id="gform" method="post" action="https://script.google.com/macros/u/1/s/AKfycbzH1AKpzty_Hj_NhfHhGITcNsMkW0dRn-Ne69Jg8g3Us-kyx2A/exec" name="form1">
+              <p class="input-wrapper">First Name: <br>
+              <input type="text" id="fname" name="fname" placeholder="first name">
+              <br>
+              <span class="err" id="fnErr"></span>
+              </p>
+            <p class="input-wrapper">Last Name:
+              <br>
+              <input type="text" id="lname" name="lname" placeholder="last name">
+              <br>
+              <span class="err" id="lnErr">
+              </span>
+            </p>
+            <p class="input-wrapper">Email:
+            <br>
+            <input type="text" id="email" name="email" placeholder="you@youremail.com">
+            <br>
+            <span class="err" id="emErr">
+            </span>
+            </p>
+            <p class="input-wrapper">Phone:
+            <br>
+            <input type="tel" id="phone1" name="phone1" placeholder="XXX" maxlength="3">
+            <input type="tel" id="phone2" name="phone2" placeholder="XXX" maxlength="3" class="shortmargin">
+            <input type="tel" id="phone3" name="phone3" placeholder="XXXX" maxlength="4" class="shortmargin">
+            <br>
+            <span class="err" id="phErr">
+            </span>
+            </p>
+            <p class="input-wrapper">Comments:
+            <br>
+            <textarea id="comments" name="comments" placeholder="add your comments" class="adj">
+            </textarea>
+            <br>
+            <span class="err" id="cmErr">
+            </span>
+            </p>
+            <p class="input-wrapper">Please tell us about your preferences:
+            </p>
+          <p class="input-wrapper">I am interested in:
+            <br>
+            <span id="inErr" class="err">
+            </span>
+            <select id="interest" name="interest" class="adj">
+              <option>-- Please Select --</option>
+              <option>Purchasing Stationery</option>
+              <option>Learning about bulk discounts</option>
+              <option>Craft parties</option>
+            </select>
+          </p>
+          <p class="input-wrapper">Would you like to receive notifications via email?
+            <br>
+            <span class="err" id="notePref"></span>
+            <input type="radio" id="notices--yes" name="notices" value="yes">: Yes!
+            <input type="radio" id="notices--maybe" name="notices" value="maybe">: Not Yet.
+            <input type="radio" id="notices--no-thank-you" name="notices" value="no">:No Thanks.
+          </p>
+          <p class="input-wrapper"><input type="button" value="Send Information" onclick="validForm()">
+          </p>
+            </form>
+          </article>
+        </div>
+        <footer><small>Copyright &copy; 2017 Kristen Studebaker</small></footer>
+      </div>
+      <div class="col-1-3 social-media-col">
+<a href="https://www.facebook.com/studiestationerycrafts/"> <i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </div>
+  <script src="js/formhandler.js"></script>
+</body>
+
+</html>
